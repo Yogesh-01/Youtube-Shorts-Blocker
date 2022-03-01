@@ -38,6 +38,7 @@ window.onload=function(){
                 if(exec==1){
                     curr.style.border='3px solid red'
                     curr.remove()
+                    console.log("deleted")
                 } 
                continue
                
@@ -55,7 +56,7 @@ window.onload=function(){
                // console.log(t5)
                 let t6 = time_str[time_str.indexOf(':')+5]
                // console.log(t6)
-               console.log(time_str.trim())
+               //console.log(time_str.trim())
                 
                 let h=0
                 let m=0
@@ -75,7 +76,7 @@ window.onload=function(){
                      s=Number(t3+t4)
                 }
 
-            console.log('h - '+h+' m- '+m+' s- '+s)
+           // console.log('h - '+h+' m- '+m+' s- '+s)
     
          
 
@@ -83,6 +84,7 @@ window.onload=function(){
             if(exec==1){
                 curr.style.border='1px solid red'
                 curr.remove()
+                console.log("deleted")
             } 
            }
            
@@ -116,6 +118,7 @@ window.onload=function(){
             if(exec==1){
                 curr_home.style.border='3px solid red'
                 curr_home.remove()
+                console.log("deleted")
             } 
            continue
            
@@ -133,7 +136,7 @@ window.onload=function(){
            // console.log(t5)
             let t6_home = time_str_home[time_str_home.indexOf(':')+5]
            // console.log(t6)
-           console.log(time_str_home.trim())
+          //console.log(time_str_home.trim())
             
             let h_home=0
             let m_home=0
@@ -141,8 +144,8 @@ window.onload=function(){
 
             // if t6 number, then string is hours
             if(isNum(t5_home)){
-                 console.log("hours present")
-                 console.log(Number(t1_home+t2_home))
+                 //console.log("hours present")
+                //console.log(Number(t1_home+t2_home))
                  h_home=Number(t1_home+t2_home)
                  m_home=Number(t3_home+t4_home)
                  s_home=Number(t5_home+t6_home)
@@ -153,7 +156,7 @@ window.onload=function(){
                  s_home=Number(t3_home+t4_home)
             }
 
-        console.log('h - '+h_home+' m- '+m_home+' s- '+s_home)
+        //console.log('h - '+h_home+' m- '+m_home+' s- '+s_home)
 
        //console.log(vid_list.length)
 
@@ -161,6 +164,7 @@ window.onload=function(){
         if(exec==1){
             curr_home.style.border='1px solid red'
             curr_home.remove()
+            console.log("deleted")
         } 
        }
        
@@ -192,6 +196,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
             if(exec==1){
                 curr_news.style.border='3px solid red'
                 curr_news.remove()
+                console.log("deleted")
             } 
            continue
            
@@ -217,8 +222,8 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
 
             // if t6 number, then string is hours
             if(isNum(t5_news)){
-                 console.log("hours present")
-                 console.log(Number(t1_news+t2_news))
+                // console.log("hours present")
+                // console.log(Number(t1_news+t2_news))
                  h_news=Number(t1_news+t2_news)
                  m_news=Number(t3_news+t4_news)
                  s_news=Number(t5_news+t6_news)
@@ -229,12 +234,13 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
                  s_news=Number(t3_news+t4_news)
             }
 
-        console.log('h - '+h_news+' m- '+m_news+' s- '+s_news)
+        //console.log('h - '+h_news+' m- '+m_news+' s- '+s_news)
 
        if((m_news<=0 && h_news==0)||(m_news==1 && h_news==0 && s_news<=40)){
         if(exec==1){
             curr_news.style.border='1px solid red'
             curr_news.remove()
+            console.log("deleted")
         } 
        }
        
@@ -260,12 +266,14 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
 
         let curr_vid_dur_subs = curr_subs.querySelector('span#text')
        // curr_vid_dur_subs.style.border = "1px solid yellow";
+        if(curr_vid_dur_subs==null)continue
         var time_str_subs = curr_vid_dur_subs.textContent
         if(time_str_subs==null) continue
         if(time_str_subs.trim() == "SHORTS"){
             if(exec==1){
                curr_subs.style.border='1px solid red'
                curr_subs.remove()
+               console.log("deleted")
             } 
            continue
            
@@ -291,8 +299,8 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
 
             // if t6 number, then string is hours
             if(isNum(t5_subs)){
-                 console.log("hours present")
-                 console.log(Number(t1_subs+t2_subs))
+                 //console.log("hours present")
+                 //console.log(Number(t1_subs+t2_subs))
                  h_subs=Number(t1_subs+t2_subs)
                  m_subs=Number(t3_subs+t4_subs)
                  s_subs=Number(t5_subs+t6_subs)
@@ -303,13 +311,14 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
                  s_subs=Number(t3_subs+t4_subs)
             }
 
-        console.log('h - '+h_subs+' m- '+m_subs+' s- '+s_subs)
+        //console.log('h - '+h_subs+' m- '+m_subs+' s- '+s_subs)
 
 
        if((m_subs<=0 && h_subs==0)||(m_subs==1 && h_subs==0 && s_subs<=40)){
         if(exec==1){
             curr_subs.style.border='2px solid red'
             curr_subs.remove()
+            console.log("deleted")
         } 
        }
        
@@ -345,6 +354,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
             if(exec==1){
                 curr_sidebar.style.border='3px solid red'
                 curr_sidebar.remove()
+                console.log("deleted")
             } 
            continue
            
@@ -363,7 +373,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
            // console.log(t5)
             let t6_sidebar = time_str_sidebar[time_str_sidebar.indexOf(':')+5]
            // console.log(t6)
-           console.log(time_str_sidebar.trim())
+           //console.log(time_str_sidebar.trim())
             
             let h_sidebar=0
             let m_sidebar=0
@@ -371,8 +381,8 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
 
             // if t6 number, then string is hours
             if(isNum(t5_sidebar)){
-                 console.log("hours present")
-                 console.log(Number(t1_sidebar+t2_sidebar))
+                 //console.log("hours present")
+                 //console.log(Number(t1_sidebar+t2_sidebar))
                  h_sidebar=Number(t1_sidebar+t2_sidebar)
                  m_sidebar=Number(t3_sidebar+t4_sidebar)
                  s_sidebar=Number(t5_sidebar+t6_sidebar)
@@ -383,7 +393,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
                  s_sidebar=Number(t3_sidebar+t4_sidebar)
             }
 
-        console.log('h - '+h_sidebar+' m- '+m_sidebar+' s- '+s_sidebar)
+       // console.log('h - '+h_sidebar+' m- '+m_sidebar+' s- '+s_sidebar)
 
        //console.log(vid_list.length)
 
@@ -391,6 +401,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
         if(exec==1){
             curr_sidebar.style.border='1px solid red'
             curr_sidebar.remove()
+            console.log("deleted")
         } 
        }
        
@@ -415,6 +426,7 @@ var intervalId_home = window.setInterval(function(){  // main repeating function
         if(exec==1){
            curr_reel.style.border = "2px solid orange";
            curr_reel.remove()
+           console.log("deleted")
         } 
 
 
