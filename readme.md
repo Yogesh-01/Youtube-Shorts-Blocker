@@ -1,6 +1,6 @@
 # Youtube Shorts Blocker
 
-A chrome extension that blocks youtube shorts (videos with duration less than 1:04 minutes). Uses CSS selectors to target videos and removes them from DOM. Also outlines processed elements with subtle colour.
+A chrome extension that blocks youtube shorts (videos with duration less than 1:40 minutes). Uses CSS selectors to target videos and removes them from DOM. Also outlines processed elements with subtle colour.
 
 ![preview](readme/pre.png)
 
